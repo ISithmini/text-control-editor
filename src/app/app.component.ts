@@ -57,7 +57,7 @@ export class AppComponent {
 
   }
 
-  OnClickRuler(){
+  onClickRuler(){
     console.log('yyy')
     toggleVerticalRuler()
   }
