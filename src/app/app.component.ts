@@ -1,40 +1,35 @@
 import { Component } from '@angular/core';
 
-import { DocumentEditorComponent } from '@txtextcontrol/tx-ng-document-editor';
+import  {DocumentEditorComponent, DocumentEditorModule} from '@txtextcontrol/tx-ng-document-editor';
+//import toggleVerticleRuler from '../assets/js/'
 
-//declare const saveDocument:  any ;
-//declare const loadDocument: any;
+declare const saveDocument:  any ;
+declare const loadDocument: any;
+declare const textEditor: any;
+declare const toggleVerticalRuler : any;
+
+declare const TX: DocumentEditorComponent;
+declare const Text: DocumentEditorModule;
+
 declare const TXTextControl: any;
 
 
 
+// function saveDocument() {
+//   return new Promise(resolve => {
+//     TXTextControl.saveDocument(TXTextControl.streamType.InternalUnicodeFormat, function (e: any) {
+//       resolve(e.data);
+//       console.log("done");
+//     });
+//   });
+// }
 
-function saveDocument() {
-  return new Promise(resolve => {
-    TXTextControl.saveDocument(TXTextControl.streamType.InternalUnicodeFormat, function (e: any) {
-      resolve(e.data);
-      console.log("done");
-    });
+// function loadDocument() {
+//   TXTextControl.loadDocument(TXTextControl.streamType.InternalUnicodeFormat, document);
+//   btoa('<strong>Test</strong>');
 
+// }
 
-  });
-
-}
-
-function loadDocument() {
-  TXTextControl.loadDocument(TXTextControl.streamType.InternalUnicodeFormat, document);
-
-}
-
-function textEditor(data  : any) {
-  //TXTextControl.HeaderFooter.GetItem( TXTextControl.HeaderFooterType.Header); 
-  //console.log(TXTextControl.HeaderFooter.GetItem( TXTextControl.HeaderFooterType.Header))
-  //TXTextControl.HeaderFooterCollection.add((<HeaderFooterType> headerFooterType))
-  console.log(TXTextControl.HeaderFooterCollection.add(data))
-  console.log(data)
-  //TXTextControl.HeaderFooterCollection.add(<string> headerFooterType,)
-
-}
 
 
 @Component({
@@ -58,7 +53,13 @@ export class AppComponent {
   }
 
   onClickTextEditor() {
-    textEditor(this.data);
+    textEditor();
 
   }
+
+  OnClickRuler(){
+    console.log('yyy')
+    toggleVerticalRuler()
+  }
+  
 }
