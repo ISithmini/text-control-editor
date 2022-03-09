@@ -26,6 +26,13 @@ function toggleVerticalRuler() {
 function textEditor() {
 
     console.log('asfdf')
+
+    TXTextControl.loadDocument(TXTextControl.StreamType.HTMLFormat,
+        btoa('<strong>Test</strong>'));
+
+    // Inserts a 3x3 Table.
+    TXTextControl.tables.add(3, 3)
+    //TXTextControl.tables.col
     //TXTextControl.HeaderFooter.GetItem( TXTextControl.HeaderFooterType.Header); 
     //console.log(TXTextControl.HeaderFooter.GetItem( TXTextControl.HeaderFooterType.Header))
     //TXTextControl.HeaderFooterCollection.add(Headers Header)
@@ -36,6 +43,19 @@ function textEditor() {
     //TXTextControl.HeaderFooterType.Header('asfdf')
     //console.log(TXTextControl.HeaderFooterType.Header('asfdf'))
     //console.log(TXTextControl.HeaderFooterCollection.add(TXTextControl.HeaderFooterType.Header))
-    //TXTextControl.HeaderFooterCollection.add(<string> headerFooterType,)
+    //TXTextControl.HeaderFooterCollection.add(<string> headerFooterType,) 
+    
+  }
+
+  //Hide Header and footer
+  function toggleRibbonElement()
+  {
+
+        var ribbonGroup = document.getElementById('ribbonGroupIllustrations')   
+        console.log(ribbonGroup)  
+        ribbonGroup.style.display = 'none'
   }
   
+
+
+    

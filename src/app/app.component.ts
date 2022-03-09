@@ -6,6 +6,7 @@ import  {DocumentEditorComponent, DocumentEditorModule} from '@txtextcontrol/tx-
 declare const saveDocument:  any ;
 declare const loadDocument: any;
 declare const textEditor: any;
+declare const toggleRibbonElement: any;
 declare const toggleVerticalRuler : any;
 
 declare const TX: DocumentEditorComponent;
@@ -54,12 +55,15 @@ export class AppComponent {
 
   onClickTextEditor() {
     textEditor();
+    toggleRibbonElement();
+
 
   }
 
   onClickRuler(){
     console.log('yyy')
     toggleVerticalRuler()
+
   }
   
 }
