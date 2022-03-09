@@ -8,6 +8,7 @@ function saveDocument() {
 function loadDocument() {
     TXTextControl.loadDocument(TXTextControl.StreamType.HTMLFormat,
         btoa('<strong>Test</strong>'));
+        TXTextControl.tables.add(3, 3)
 }
 
 let checked = true; 
@@ -50,11 +51,15 @@ function textEditor() {
   //Hide Header and footer
   function toggleRibbonElement()
   {
+    //Hide Header
+    document.getElementById("ribbonTabInsert_drpDnBtnInsertHeader" ).style.pointerEvents= 'none'
 
-        var ribbonGroup = document.getElementById('ribbonGroupIllustrations')   
-        console.log(ribbonGroup)  
-        ribbonGroup.style.display = 'none'
+    //Hide Footer
+    document.getElementById("ribbonTabInsert_drpDnBtnInsertFooter" ).style.pointerEvents= 'none'
   }
+  
+
+ 
   
 
 
